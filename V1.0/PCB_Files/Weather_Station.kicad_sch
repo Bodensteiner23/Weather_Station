@@ -3141,6 +3141,12 @@
 		(uuid "1779c608-b5a9-45e1-8f08-213f2b8ed153")
 	)
 	(junction
+		(at 63.5 218.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "203d421e-bec1-4f6a-bfb6-18a1c3085545")
+	)
+	(junction
 		(at 160.02 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3193,6 +3199,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "58db9bf1-fc2e-4a6d-9e69-3dac35330d70")
+	)
+	(junction
+		(at 63.5 200.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5903b7f6-c1ec-4b18-9ede-744dd90fbd94")
 	)
 	(junction
 		(at 193.04 223.52)
@@ -3470,7 +3482,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 106.68) (xy 96.52 109.22)
+			(xy 97.79 106.68) (xy 97.79 109.22)
 		)
 		(stroke
 			(width 0)
@@ -3690,7 +3702,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 96.52) (xy 96.52 96.52)
+			(xy 88.9 96.52) (xy 97.79 96.52)
 		)
 		(stroke
 			(width 0)
@@ -3720,7 +3732,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 109.22) (xy 114.3 109.22)
+			(xy 97.79 109.22) (xy 114.3 109.22)
 		)
 		(stroke
 			(width 0)
@@ -3800,7 +3812,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 199.39) (xy 63.5 201.93)
+			(xy 63.5 199.39) (xy 63.5 200.66)
 		)
 		(stroke
 			(width 0)
@@ -3890,7 +3902,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 96.52) (xy 96.52 99.06)
+			(xy 97.79 96.52) (xy 97.79 99.06)
 		)
 		(stroke
 			(width 0)
@@ -4070,6 +4082,16 @@
 	)
 	(wire
 		(pts
+			(xy 53.34 205.74) (xy 53.34 200.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c4516b8-e990-4c96-8724-e7584f94fae5")
+	)
+	(wire
+		(pts
 			(xy 41.91 97.79) (xy 54.61 97.79)
 		)
 		(stroke
@@ -4207,6 +4229,16 @@
 			(type default)
 		)
 		(uuid "88a0167f-dcc3-4ca1-b250-8b56b4f8851c")
+	)
+	(wire
+		(pts
+			(xy 53.34 218.44) (xy 63.5 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88dbe6fb-d91d-4f93-a0c3-17dfc0196831")
 	)
 	(wire
 		(pts
@@ -4390,6 +4422,16 @@
 	)
 	(wire
 		(pts
+			(xy 53.34 200.66) (xy 63.5 200.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a73ebdea-658b-4e58-a018-e1aac8225a2a")
+	)
+	(wire
+		(pts
 			(xy 186.69 36.83) (xy 186.69 38.1)
 		)
 		(stroke
@@ -4490,7 +4532,17 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 217.17) (xy 63.5 219.71)
+			(xy 63.5 218.44) (xy 63.5 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbf2ab85-6323-43aa-afe5-1ab8ecb9cec2")
+	)
+	(wire
+		(pts
+			(xy 63.5 217.17) (xy 63.5 218.44)
 		)
 		(stroke
 			(width 0)
@@ -4610,6 +4662,16 @@
 	)
 	(wire
 		(pts
+			(xy 53.34 213.36) (xy 53.34 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9ee6e41-454e-424f-a3d2-dbfd42b215a3")
+	)
+	(wire
+		(pts
 			(xy 59.69 90.17) (xy 59.69 93.98)
 		)
 		(stroke
@@ -4657,6 +4719,16 @@
 			(type default)
 		)
 		(uuid "cf238dc3-9427-4006-b7bb-8914e712d169")
+	)
+	(wire
+		(pts
+			(xy 63.5 200.66) (xy 63.5 201.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d83476f3-81d9-4334-ae5b-704413acfe75")
 	)
 	(wire
 		(pts
@@ -5687,7 +5759,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "4k7"
 			(at 91.44 104.1399 0)
 			(effects
 				(font
@@ -5868,6 +5940,76 @@
 			(project "Weather_Station"
 				(path "/480d2398-431a-4c09-b50a-21d5fdc9f45a"
 					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 53.34 209.55 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "47041cec-3247-4be1-9121-a24c7c043742")
+		(property "Reference" "C21"
+			(at 49.53 208.2799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100n/10V"
+			(at 49.53 210.8199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 54.3052 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 53.34 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 53.34 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c4138306-46ac-4a1d-8b48-3cae52549117")
+		)
+		(pin "1"
+			(uuid "d3e1648a-d250-4843-b800-157db0c84edd")
+		)
+		(instances
+			(project "Weather_Station"
+				(path "/480d2398-431a-4c09-b50a-21d5fdc9f45a"
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -6463,24 +6605,23 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "72cd89c4-c182-44e3-856a-468377648865")
 		(property "Reference" "U2"
-			(at 57.15 208.2799 0)
+			(at 66.04 200.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "HDC1080DMBR"
-			(at 57.15 210.8199 0)
+			(at 66.04 203.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Package_SON:Texas_PWSON-N6"
@@ -6820,7 +6961,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 96.52 102.87 0)
+		(at 97.79 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6829,7 +6970,7 @@
 		(fields_autoplaced yes)
 		(uuid "960dd0a5-d70b-423c-a8e8-2e3cb3a43d26")
 		(property "Reference" "R3"
-			(at 99.06 101.5999 0)
+			(at 100.33 101.5999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6837,8 +6978,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
-			(at 99.06 104.1399 0)
+		(property "Value" "4k7"
+			(at 100.33 104.1399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6847,7 +6988,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 94.742 102.87 90)
+			(at 96.012 102.87 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6856,7 +6997,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 96.52 102.87 0)
+			(at 97.79 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6865,7 +7006,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 96.52 102.87 0)
+			(at 97.79 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
