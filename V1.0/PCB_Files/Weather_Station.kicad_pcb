@@ -3241,18 +3241,18 @@
 		(descr "module CMS SOT223 4 pins")
 		(tags "CMS SOT")
 		(property "Reference" "U3"
-			(at 0 -4.500001 270)
+			(at 0 -4.500001 -90)
 			(layer "F.SilkS")
 			(uuid "9dc8d795-573f-4bab-b587-023965172c41")
 			(effects
 				(font
-					(size 1 1)
+					(size 0.8 0.8)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "Value" "AMS1117-3.3"
-			(at 0 4.500001 270)
+			(at 0 4.500001 -90)
 			(layer "F.Fab")
 			(uuid "31658c91-b225-4d0e-83d1-13712333b682")
 			(effects
@@ -4570,7 +4570,7 @@
 			(uuid "4a42282f-226c-4924-b325-a2b5ed6e882f")
 			(effects
 				(font
-					(size 1 1)
+					(size 0.8 0.8)
 					(thickness 0.15)
 				)
 			)
@@ -5512,18 +5512,18 @@
 		(descr "Unidirectional high power transient voltage suppressor (https://www.st.com/resource/en/datasheet/esda7p120-1u1m.pdf)")
 		(tags "QFN-2L Diode")
 		(property "Reference" "D1"
-			(at 0 -2.000001 270)
+			(at 0 -2.000001 -90)
 			(layer "F.SilkS")
 			(uuid "42c7e614-bd1b-430f-a886-ba3146aef5ca")
 			(effects
 				(font
-					(size 1 1)
+					(size 0.8 0.8)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "Value" "ESDA7P60-1U1M"
-			(at 0 2.000001 270)
+			(at 0 2.000001 -90)
 			(layer "F.Fab")
 			(uuid "a5f7f78f-9626-4e7a-99bd-6eb909fbb5d0")
 			(effects
@@ -5717,7 +5717,7 @@
 			(uuid "16952f08-c852-4d50-b2f5-1f43f3fa54d5")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -2.000001 270)
+			(at 0 -2.000001 -90)
 			(layer "F.Fab")
 			(uuid "7ea00b8d-872c-47d9-814f-4cd562077a10")
 			(effects
@@ -5976,18 +5976,18 @@
 		(descr "Fuse SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "fuse")
 		(property "Reference" "F1"
-			(at 0 -1.82 270)
+			(at 0 -1.82 -90)
 			(layer "F.SilkS")
 			(uuid "f7983283-d4ff-47bb-bfad-cc68652b00cc")
 			(effects
 				(font
-					(size 1 1)
+					(size 0.8 0.8)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "Value" "JFC1206-1100FS"
-			(at 0 1.82 270)
+			(at 0 1.82 -90)
 			(layer "F.Fab")
 			(uuid "70ec1c1a-5840-4ff8-98e7-92503b2d9841")
 			(effects
@@ -6139,7 +6139,7 @@
 			(uuid "990e7218-3914-4bd4-a325-b50e0e472830")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(uuid "1096bd56-0ac2-4aab-b81e-0369fd56eaa3")
 			(effects
@@ -8049,18 +8049,18 @@
 		(descr "SOT, 6 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178c.PDF variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U5"
-			(at 0 -2.4 270)
+			(at 0 -2.4 -90)
 			(layer "F.SilkS")
 			(uuid "2a3741b4-f4d4-4ba3-8bac-70c4dcfec2df")
 			(effects
 				(font
-					(size 1 1)
+					(size 0.8 0.8)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "Value" "SRV05-4"
-			(at 0 2.4 270)
+			(at 0 2.4 -90)
 			(layer "F.Fab")
 			(uuid "cd470081-ac78-44c7-b39e-20f1bab2dac2")
 			(effects
@@ -8254,7 +8254,7 @@
 			(uuid "96b5d7ec-ec8f-442f-9679-7f3fe0a071e6")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(uuid "b84dd7ee-8300-4040-8984-641c54a5196d")
 			(effects
@@ -9288,18 +9288,18 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R5"
-			(at 0 -1.43 270)
+			(at 0 -1.43 -90)
 			(layer "F.SilkS")
 			(uuid "6fcf055a-2699-4ee7-9d6b-27e91c678ab0")
 			(effects
 				(font
-					(size 1 1)
+					(size 0.8 0.8)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "Value" "1k5"
-			(at 0 1.43 270)
+			(at 0 1.43 -90)
 			(layer "F.Fab")
 			(uuid "1fdf8bb2-4d20-4f88-b0d6-e8b905fdefd1")
 			(effects
@@ -9451,7 +9451,7 @@
 			(uuid "940f0c84-cbfd-43bd-8e65-8606f65d177e")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(uuid "4879a93a-5128-4472-bdf7-deb8c1ca901e")
 			(effects
