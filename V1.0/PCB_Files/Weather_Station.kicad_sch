@@ -5374,6 +5374,10 @@
 		(uuid "51e011a7-17ee-4ed3-97c0-54aa3c28c5f0")
 	)
 	(no_connect
+		(at 114.3 119.38)
+		(uuid "5fc069b7-05ec-475e-ab1f-f60ac3704d2c")
+	)
+	(no_connect
 		(at 114.3 104.14)
 		(uuid "70c4e6a3-f9c9-4d2c-b9ef-08ac5184ba22")
 	)
@@ -5404,6 +5408,10 @@
 	(no_connect
 		(at 114.3 127)
 		(uuid "aec0a04a-fff4-4775-9e09-3f8c47072ce5")
+	)
+	(no_connect
+		(at 114.3 121.92)
+		(uuid "b50dd0c7-bac8-4338-a484-610bd5e6399a")
 	)
 	(no_connect
 		(at 147.32 99.06)
@@ -5977,16 +5985,6 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 121.92) (xy 114.3 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c4dbbfa-3ae6-4355-9789-b7a87e24da2c")
-	)
-	(wire
-		(pts
 			(xy 76.2 36.83) (xy 93.98 36.83)
 		)
 		(stroke
@@ -6454,16 +6452,6 @@
 			(type default)
 		)
 		(uuid "6a2a26f0-8e44-4f8f-8677-d34f0e76c836")
-	)
-	(wire
-		(pts
-			(xy 113.03 119.38) (xy 114.3 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a816e92-a04b-43fa-8260-298420ccefc3")
 	)
 	(wire
 		(pts
@@ -7915,7 +7903,7 @@
 		)
 		(uuid "18fca400-acb3-498b-8ec3-0f15d66cab6a")
 	)
-	(label "USART3_RX"
+	(label "USART1_RX"
 		(at 260.35 115.57 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8025,7 +8013,7 @@
 		)
 		(uuid "56459f36-95ae-401b-bbd6-9d0a5c346f17")
 	)
-	(label "USART3_TX"
+	(label "USART1_TX"
 		(at 260.35 113.03 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8047,14 +8035,14 @@
 		)
 		(uuid "585d2891-f882-4bfa-a213-332944738564")
 	)
-	(label "USART3_RX"
-		(at 113.03 121.92 180)
+	(label "USART1_RX"
+		(at 148.59 91.44 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "5c16d94c-f0f2-4463-9c8c-a363247ac389")
 	)
@@ -8223,14 +8211,14 @@
 		)
 		(uuid "bada5c7b-a97f-4d9c-b39a-1c16b3d0c34e")
 	)
-	(label "USART3_TX"
-		(at 113.03 119.38 180)
+	(label "USART1_TX"
+		(at 148.59 88.9 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "bfb39f4a-75f9-48b6-9d9f-fe80a8c40bda")
 	)
