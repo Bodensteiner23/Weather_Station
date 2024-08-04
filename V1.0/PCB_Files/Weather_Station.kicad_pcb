@@ -2381,7 +2381,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x04_Pin"
+		(property "Value" "B-2100S04P-A110"
 			(at 0 9.95 -90)
 			(layer "F.Fab")
 			(uuid "cb82948f-e228-4dcf-903b-b902650328c5")
@@ -2877,7 +2877,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x06_Pin"
+		(property "Value" "ZX-PZ2.54-1-6PZZ"
 			(at 0 15.03 90)
 			(layer "F.Fab")
 			(uuid "73ac6515-ffdf-4b90-895c-5d0ae9a6f23b")
@@ -9207,7 +9207,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Conn_01x04_Socket"
+		(property "Value" "HS91L02W2C01"
 			(at 0 -1.16 0)
 			(layer "B.Fab")
 			(uuid "80e057cc-d7ea-45f9-bff5-3b3c2df3b06d")
@@ -9245,7 +9245,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
+		(property "Description" "Display"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -9798,7 +9798,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Conn_01x04_Pin"
+		(property "Value" "B-2100S04P-A110"
 			(at 0 -9.95 0)
 			(layer "B.Fab")
 			(uuid "a3e33a0d-0cf1-4928-983f-7667c0d3cf28")

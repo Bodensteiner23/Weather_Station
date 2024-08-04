@@ -5252,6 +5252,16 @@
 		)
 		(uuid "03245c2b-973f-4245-8418-a4e1c48ea5fc")
 	)
+	(polyline
+		(pts
+			(xy 127 193.04) (xy 127 217.17)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "03fd3abb-2aa6-4e4e-a0a9-bd7ef2e0ff6f")
+	)
 	(wire
 		(pts
 			(xy 88.9 96.52) (xy 97.79 96.52)
@@ -5732,6 +5742,16 @@
 		)
 		(uuid "3c9b4c80-9e26-4719-af53-542171bf483f")
 	)
+	(polyline
+		(pts
+			(xy 148.59 217.17) (xy 127 217.17)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "3d1ed4c2-b3f4-45d4-8f45-b3328050cc20")
+	)
 	(wire
 		(pts
 			(xy 309.88 186.69) (xy 289.56 186.69)
@@ -5962,6 +5982,16 @@
 		)
 		(uuid "56939028-12e2-40a7-a955-2554df6d00cd")
 	)
+	(polyline
+		(pts
+			(xy 127 193.04) (xy 148.59 193.04)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "574bd84f-1aae-4032-b424-d0d6b979d311")
+	)
 	(wire
 		(pts
 			(xy 285.75 72.39) (xy 280.67 72.39)
@@ -5981,6 +6011,16 @@
 			(type default)
 		)
 		(uuid "578745a6-32d1-44f5-a0e2-d47b2e411fa0")
+	)
+	(polyline
+		(pts
+			(xy 148.59 193.04) (xy 148.59 217.17)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "599b14b8-e1ae-464d-aaab-ba38ea006d87")
 	)
 	(wire
 		(pts
@@ -7208,6 +7248,16 @@
 			)
 		)
 		(uuid "822b5f89-db0d-46be-8a99-86d170f2ff02")
+	)
+	(text "Display"
+		(exclude_from_sim no)
+		(at 137.16 196.85 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "920b60f8-0332-4496-9cff-0814fdeca5c1")
 	)
 	(text "Sensor"
 		(exclude_from_sim no)
@@ -8624,7 +8674,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x04_Pin"
+		(property "Value" "B-2100S04P-A110"
 			(at 161.29 213.36 0)
 			(effects
 				(font
@@ -9418,7 +9468,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x04_Socket"
+		(property "Value" "HS91L02W2C01"
 			(at 138.43 213.36 0)
 			(effects
 				(font
@@ -9444,7 +9494,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
+		(property "Description" "Display"
 			(at 140.97 205.74 0)
 			(effects
 				(font
@@ -10322,7 +10372,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x06_Pin"
+		(property "Value" "ZX-PZ2.54-1-6PZZ"
 			(at 279.4 143.5099 0)
 			(effects
 				(font
@@ -11085,7 +11135,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x04_Pin"
+		(property "Value" "B-2100S04P-A110"
 			(at 279.4 118.1101 0)
 			(effects
 				(font
