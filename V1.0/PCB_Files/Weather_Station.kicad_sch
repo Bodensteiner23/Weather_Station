@@ -5133,6 +5133,10 @@
 		(uuid "054cedfd-3030-4eb6-8b87-55c56c54d530")
 	)
 	(no_connect
+		(at 146.05 210.82)
+		(uuid "097e1008-e354-4844-b55e-cc5ff9dab827")
+	)
+	(no_connect
 		(at 114.3 106.68)
 		(uuid "0f857377-66f2-4ac2-90ad-9f943bd2d386")
 	)
@@ -5143,6 +5147,10 @@
 	(no_connect
 		(at 114.3 129.54)
 		(uuid "1787480e-cda7-4be5-83c2-be9f83fe97d5")
+	)
+	(no_connect
+		(at 147.32 66.04)
+		(uuid "1f026bf3-5460-4882-9309-2e81689335b7")
 	)
 	(no_connect
 		(at 147.32 81.28)
@@ -5159,6 +5167,10 @@
 	(no_connect
 		(at 147.32 76.2)
 		(uuid "42eec5c3-a156-44d6-bcc6-6d17399c1bb6")
+	)
+	(no_connect
+		(at 146.05 208.28)
+		(uuid "50576c70-7ff6-4516-82eb-3168f2bb4f41")
 	)
 	(no_connect
 		(at 114.3 119.38)
@@ -5189,6 +5201,10 @@
 		(uuid "9ba2f819-789e-4e12-9e6b-ae3734aa0d0b")
 	)
 	(no_connect
+		(at 147.32 71.12)
+		(uuid "9d855c7d-004a-417f-a779-130ad1a99af1")
+	)
+	(no_connect
 		(at 114.3 127)
 		(uuid "aec0a04a-fff4-4775-9e09-3f8c47072ce5")
 	)
@@ -5201,16 +5217,20 @@
 		(uuid "d1f1713a-6d36-4caf-b354-0d6a8cd78278")
 	)
 	(no_connect
+		(at 147.32 68.58)
+		(uuid "d40b7d0c-c836-4339-9868-d341a125fee5")
+	)
+	(no_connect
+		(at 146.05 205.74)
+		(uuid "d80e3b6c-6c81-458b-bf09-91c4a840c4a3")
+	)
+	(no_connect
 		(at 147.32 86.36)
 		(uuid "edc3e556-9464-427b-81aa-ab4206df585f")
 	)
 	(no_connect
-		(at 114.3 96.52)
-		(uuid "f8d12d81-45fa-4eb6-ae3f-01ebe8ec7b50")
-	)
-	(no_connect
-		(at 114.3 93.98)
-		(uuid "fea844fd-7931-4f9d-a925-7f6f4a7abd05")
+		(at 146.05 203.2)
+		(uuid "f388406c-4a06-4bac-a72d-3fb99ba1a8c7")
 	)
 	(wire
 		(pts
@@ -5514,6 +5534,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 93.98) (xy 114.3 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28e67424-73cf-40ed-9205-f6ead9a93046")
+	)
+	(wire
+		(pts
 			(xy 58.42 36.83) (xy 76.2 36.83)
 		)
 		(stroke
@@ -5641,6 +5671,16 @@
 			(type default)
 		)
 		(uuid "367bd220-6738-48aa-bbd9-5baee31cbc0a")
+	)
+	(wire
+		(pts
+			(xy 111.76 96.52) (xy 114.3 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "368ff26e-9ce6-4fcc-bec9-d791cb8b764f")
 	)
 	(wire
 		(pts
@@ -7272,6 +7312,17 @@
 		)
 		(uuid "227e242f-c02b-4744-b91b-e12d20cd2561")
 	)
+	(label "RTC_CLK"
+		(at 111.76 93.98 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2db46cf8-66de-4141-ab46-e7c645684068")
+	)
 	(label "USART1_RX"
 		(at 260.35 115.57 0)
 		(fields_autoplaced yes)
@@ -7304,6 +7355,17 @@
 			(justify left bottom)
 		)
 		(uuid "3a0436fa-9cd2-477b-a9cd-1a08dab6687a")
+	)
+	(label "RTC_INT"
+		(at 111.76 96.52 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3dde957d-f13a-432b-a107-b23457058961")
 	)
 	(label "SWCLK"
 		(at 260.35 118.11 0)
