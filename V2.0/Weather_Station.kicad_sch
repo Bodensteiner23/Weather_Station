@@ -7274,6 +7274,46 @@
 		)
 		(uuid "ff17eae2-36c9-477f-a75d-6a5e66d3e6a9")
 	)
+	(text_box "Actually 3.4kOhm.\nTest with higher or lower \nResistor Values."
+		(exclude_from_sim no)
+		(at 81.28 114.3 0)
+		(size 27.94 7.62)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type color)
+			(color 255 255 0 1)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "31681520-1257-4316-9c5c-95f1ec8df92a")
+	)
+	(text_box "ToDo: Add ESD Protection.\n\nCheck Pullup and Pulldown"
+		(exclude_from_sim no)
+		(at 276.86 96.52 0)
+		(size 27.94 10.16)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type color)
+			(color 255 255 0 1)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "a1113fa4-de3c-4b0b-adaf-d102c9975b58")
+	)
 	(text "Inputs\n"
 		(exclude_from_sim no)
 		(at 236.22 17.78 0)
@@ -7285,17 +7325,6 @@
 			)
 		)
 		(uuid "0933ff2c-6b54-4663-8796-012bd4298719")
-	)
-	(text "Actually 3.4kOhm.\nTest with higher or lower \nResistor Values."
-		(exclude_from_sim no)
-		(at 86.36 116.84 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "46b1d022-0f3a-4f6f-83c9-94b4a2edd11a")
 	)
 	(text "Display - Module"
 		(exclude_from_sim no)
@@ -7390,16 +7419,6 @@
 			)
 		)
 		(uuid "e1ce8e88-35e3-432a-ac6c-6aacd663d6e9")
-	)
-	(text "Check Pullup and Pulldown."
-		(exclude_from_sim no)
-		(at 299.72 110.49 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "ed725d26-a16e-4438-8664-b44108212b34")
 	)
 	(label "LED_B"
 		(at 149.86 73.66 0)
