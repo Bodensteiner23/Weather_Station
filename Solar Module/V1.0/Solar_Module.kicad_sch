@@ -2346,7 +2346,7 @@
 				)
 			)
 		)
-		(property "Value" "NRVB130T1G"
+		(property "Value" "SS54"
 			(at 81.5975 43.18 0)
 			(effects
 				(font
@@ -2354,7 +2354,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Diode_SMD:D_SMA"
 			(at 81.28 46.99 0)
 			(effects
 				(font
@@ -2687,7 +2687,7 @@
 				)
 			)
 		)
-		(property "Value" "CY43-10UH"
+		(property "Value" "MDA7030-150M"
 			(at 63.5 44.45 90)
 			(effects
 				(font
@@ -2695,7 +2695,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Ferrocore_DLG-0403"
+		(property "Footprint" "Inductor_SMD:L_Sunlord_MWSA0603S"
 			(at 63.5 46.99 0)
 			(effects
 				(font
