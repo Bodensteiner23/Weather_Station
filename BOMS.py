@@ -1,28 +1,26 @@
 import pandas as pd
-import os
-import glob
 
-# Get the directory of the current Python file
-current_dir = os.path.dirname(os.path.abspath(__file__))
+# Read the CSV files into DataFrames
+df1 = pd.read_csv('bom_Main_PCB.csv')
+df2 = pd.read_csv('bom_Solar_Module.csv')
 
-# List all CSV files in the directory
-csv_files = glob.glob(os.path.join(current_dir, '*.csv'))
+# Add a new column to indicate the source
+df1['Source'] = 'Main_PCB'
+df2['Source'] = 'Solar_Module'
 
-# Process each CSV file individually
-for csv_file in csv_files:
-    # Read the CSV file into a DataFrame
-    df = pd.read_csv(csv_file)
-    
-    # Group by 'Value' and 'Footprint', then sum the 'Quantity' and join the 'Designator'
-    df_grouped = df.groupby(['Value', 'Footprint'], as_index=False).agg({'Quantity': 'sum', 'Designator': ','.join})
-    
-    # Sort the DataFrame alphabetically by 'Designator'
-    df_grouped = df_grouped.sort_values(by='Designator')
-    
-    # Drop the 'LCSC Part #' column if it exists
-    df_grouped = df_grouped.drop(columns=['LCSC Part #'], errors='ignore')
-    
-    # Save the result to the same CSV file
-    df_grouped.to_csv(csv_file, index=False)
+# Concatenate the DataFrames
+df = pd.concat([df1, df2])
+
+# Group by 'Value' and 'Footprint', then sum the 'Quantity' and join the 'Designator'
+df_grouped = df.groupby(['Value', 'Footprint'], as_index=False).agg({'Quantity': 'sum', 'Designator': ','.join})
+
+# Sort the DataFrame by 'Designator' alphabetically
+df_grouped = df_grouped.sort_values(by='Designator')
+
+# Drop the 'LCSC Part #' column
+df_grouped = df_grouped.drop(columns=['LCSC Part #'], errors='ignore')
+
+# Save the result to a new CSV file
+df_grouped.to_csv('Merged_BOM.csv', index=False)
 
 print("The data has been processed, sorted, and saved.")
