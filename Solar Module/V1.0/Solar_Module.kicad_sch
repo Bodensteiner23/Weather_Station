@@ -5689,13 +5689,14 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "KT-0603G"
 			(at 195.58 56.1974 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
@@ -5889,13 +5890,14 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "KT-0603R"
 			(at 185.42 56.1974 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
