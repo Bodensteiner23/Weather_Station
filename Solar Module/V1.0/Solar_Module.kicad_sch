@@ -3780,6 +3780,46 @@
 		)
 		(uuid "f45c9538-810b-44c9-a6ea-3496b9d0dfda")
 	)
+	(text_box "Change to CYA0630-15UH on PCB"
+		(exclude_from_sim no)
+		(at 54.61 30.48 0)
+		(size 19.05 8.89)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type color)
+			(color 0 255 255 1)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "26fcaee9-5f5a-48d9-9d43-1aac694c5ccb")
+	)
+	(text_box "Change R3 to 2x 2k in Series."
+		(exclude_from_sim no)
+		(at 217.17 90.17 0)
+		(size 19.05 8.89)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type color)
+			(color 0 255 255 1)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "c85a8078-f9d4-4e92-9e13-33d8a5242069")
+	)
 	(text "Solar Panel"
 		(exclude_from_sim no)
 		(at 27.94 109.22 0)
@@ -6231,7 +6271,7 @@
 				)
 			)
 		)
-		(property "Value" "MDA7030-150M"
+		(property "Value" "CYA0630-15UH"
 			(at 63.5 44.45 90)
 			(effects
 				(font
@@ -6239,7 +6279,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Sunlord_MWSA0603S"
+		(property "Footprint" "Inductor_SMD:L_Chilisin_BMRx00060615"
 			(at 63.5 46.99 0)
 			(effects
 				(font
