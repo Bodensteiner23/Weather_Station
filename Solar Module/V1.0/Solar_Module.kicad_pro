@@ -63,8 +63,8 @@
         "hole_clearance|178635000|59450000|28ea881e-0068-46e0-820b-d4522e6be9b2|5e72d914-aed3-4f0b-8298-8806df976f44",
         "hole_clearance|178635000|65550000|f75293cb-e2e4-45bd-9dc3-bb3da52846e6|529e38f1-96aa-466a-a5bf-83bc19a719a0",
         "hole_clearance|178635000|65550000|f75293cb-e2e4-45bd-9dc3-bb3da52846e6|fa09c4e1-bf48-4cf9-b96f-89b8ace8b4f4",
-        "silk_overlap|173265002|65235000|cfeb2c8b-4842-47c0-9aab-2f626abb6464|b2ea172b-af56-44bf-974d-c0dc961213b7",
         "silk_overlap|173265002|65265000|b2ea172b-af56-44bf-974d-c0dc961213b7|0e6834a3-c103-4fe6-919f-6be48e290b22",
+        "silk_overlap|173265002|65265000|b2ea172b-af56-44bf-974d-c0dc961213b7|cfeb2c8b-4842-47c0-9aab-2f626abb6464",
         "silk_overlap|173265002|65265000|f9c1d406-5ffc-4646-8027-d46a737316b9|0e6834a3-c103-4fe6-919f-6be48e290b22",
         "silk_overlap|173265002|65265000|f9c1d406-5ffc-4646-8027-d46a737316b9|cfeb2c8b-4842-47c0-9aab-2f626abb6464"
       ],
@@ -565,13 +565,73 @@
           "label": "DNP",
           "name": "${DNP}",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Availability",
+          "name": "Availability",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Check_prices",
+          "name": "Check_prices",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description_1",
+          "name": "Description_1",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MF",
+          "name": "MF",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MP",
+          "name": "MP",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Package",
+          "name": "Package",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Price",
+          "name": "Price",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "SnapEDA_Link",
+          "name": "SnapEDA_Link",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Beschreibung",
+          "name": "Description",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
-      "name": "Grouped By Value",
+      "name": "",
       "sort_asc": true,
-      "sort_field": "Referenz"
+      "sort_field": "Reference"
     },
     "connection_grid_size": 50.0,
     "drawing": {
