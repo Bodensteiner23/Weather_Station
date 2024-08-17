@@ -1,0 +1,2 @@
+../Core/Src/HDC1080.c:7:6:HDC1080_initSensor	32	static
+../Core/Src/HDC1080.c:24:6:HDC1080_readData	40	static
