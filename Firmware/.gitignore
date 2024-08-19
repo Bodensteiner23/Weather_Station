@@ -25,3 +25,4 @@ STM32-for-VSCode.config.yaml
 # Ignore system files
 .DS_Store
 Thumbs.db
+/Debug/
