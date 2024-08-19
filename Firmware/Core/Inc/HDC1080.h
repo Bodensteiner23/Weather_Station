@@ -12,5 +12,7 @@ typedef struct {
 }ws_value_t;
 
 
+void HDC1080_initI2C(I2C_HandleTypeDef _hi2c);
+
 
 #endif /* INC_HDC1080_H_ */

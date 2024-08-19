@@ -3,8 +3,14 @@
 
 #include "HDC1080.h"
 
+I2C_HandleTypeDef hi2c;
 
-void HDC1080_initSensor(I2C_HandleTypeDef _hi2c) {
+void HDC1080_initI2C(I2C_HandleTypeDef _hi2c) {
+	hi2c = _hi2c;
+
+}
+
+void HDC1080_initSensor() {
 
 	uint8_t data_send[2];
 	uint16_t config_data = 0;
@@ -16,19 +22,19 @@ void HDC1080_initSensor(I2C_HandleTypeDef _hi2c) {
 	data_send[0] = (config_data >> 0) & 0xFF;
 	data_send[1] = (config_data >> 8) & 0xFF;
 
-	HAL_I2C_Mem_Write(&_hi2c, HDC1080_I2C_Address, Config_Register_Address,
+	HAL_I2C_Mem_Write(&hi2c, HDC1080_I2C_Address, Config_Register_Address,
 			1, data_send, 2, 100);
 }
 
 
-ws_value_t HDC1080_readData(I2C_HandleTypeDef _hi2c) {
+ws_value_t HDC1080_readData() {
 
 	uint8_t data_send[1];
 	uint8_t data_read[4];
 	ws_value_t temp_humid_values;
 
 	// Start data pull request
-	HAL_I2C_Mem_Write(&_hi2c, HDC1080_I2C_Address, Temperature_Register_Address,
+	HAL_I2C_Mem_Write(&hi2c, HDC1080_I2C_Address, Temperature_Register_Address,
 			1, data_send, 1, 100); // FixMe: Is it only working when typing: &data_send[0]
 
 	HAL_Delay(15);

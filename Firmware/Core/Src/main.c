@@ -20,6 +20,8 @@
 #include "main.h"
 #include "usb_device.h"
 
+#include "HDC1080.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -100,12 +102,24 @@ int main(void)
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 
+
+  HDC1080_initI2C(hi2c1);
+  HDC1080_initSensor();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+
+	  HDC1080_readData();
+	  HAL_Delay(1000);
+
+
+
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
