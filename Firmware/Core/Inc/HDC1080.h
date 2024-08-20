@@ -13,6 +13,7 @@ typedef struct {
 
 
 void HDC1080_initI2C(I2C_HandleTypeDef _hi2c);
-
+void HDC1080_initSensor(void);
+ws_value_t HDC1080_readData(void);
 
 #endif /* INC_HDC1080_H_ */

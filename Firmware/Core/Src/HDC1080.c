@@ -10,7 +10,7 @@ void HDC1080_initI2C(I2C_HandleTypeDef _hi2c) {
 
 }
 
-void HDC1080_initSensor() {
+void HDC1080_initSensor(void) {
 
 	uint8_t data_send[2];
 	uint16_t config_data = 0;
@@ -27,7 +27,7 @@ void HDC1080_initSensor() {
 }
 
 
-ws_value_t HDC1080_readData() {
+ws_value_t HDC1080_readData(void) {
 
 	uint8_t data_send[1];
 	uint8_t data_read[4];
@@ -40,11 +40,11 @@ ws_value_t HDC1080_readData() {
 	HAL_Delay(15);
 
 	// Read Temp Data
-	HAL_I2C_Mem_Read(&_hi2c, HDC1080_I2C_Address, Temperature_Register_Address,
+	HAL_I2C_Mem_Read(&hi2c, HDC1080_I2C_Address, Temperature_Register_Address,
 						1, &data_read[0], 2, 100);
 	uint16_t temp_raw_val = (data_read[0] << 8) | data_read[1];
 	// Read Humid Data
-	 HAL_I2C_Mem_Read(&_hi2c, HDC1080_I2C_Address, Humidity_Register_Address,
+	 HAL_I2C_Mem_Read(&hi2c, HDC1080_I2C_Address, Humidity_Register_Address,
 						1, &data_read[2], 2, 100);
 	 uint16_t humid_raw_val = (data_read[2] << 8) | data_read[3];
 

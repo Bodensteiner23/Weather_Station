@@ -49,7 +49,7 @@ UART_HandleTypeDef huart2;
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
-
+ws_value_t weather_station_data;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -112,9 +112,11 @@ int main(void)
   while (1)
   {
 
-
-	  HDC1080_readData();
+	  // Sensor Readout
+	  weather_station_data = HDC1080_readData();
 	  HAL_Delay(1000);
+
+	  // Plot Data on Display
 
 
 
