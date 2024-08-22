@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "name": "STM32",
+            "includePath": [
+                "${workspaceFolder}/Core/Inc",
+                "${workspaceFolder}/Drivers/**",
+                "${workspaceFolder}/Middlewares/**",
+                "${workspaceFolder}/USB_DEVICE/**",
+                "${workspaceFolder}/App/**",
+                "${workspaceFolder}/Debug/**"
+            ],
+            "defines": [
+                "STM32F103xB",
+                "USE_HAL_DRIVER"
+            ],
+            "compilerPath": "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/bin/arm-none-eabi-gcc.exe",
+            "cStandard": "c99",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-arm",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/Core/Inc",
+                    "${workspaceFolder}/Drivers/**",
+                    "${workspaceFolder}/Middlewares/**",
+                    "${workspaceFolder}/USB_DEVICE/**",
+                    "${workspaceFolder}/App/**",
+                    "${workspaceFolder}/Debug/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 4
+}

@@ -16,7 +16,7 @@ mx.scratch
 .idea
 
 # Ignore VS Code IDE settings and STM32Make Plugin things
-.vscode
+# .vscode
 build/
 STM32Make.make
 STM32-for-VSCode.config.yaml
