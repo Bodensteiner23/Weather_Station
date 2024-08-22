@@ -16,6 +16,6 @@ void display_plotWeatherStationData(void) {
 
 
     ssd1306_UpdateScreen();
-    HAL_Delay(2000);
+    HAL_Delay(2000);		//ToDo: Check if this delay is neccessary
 
 }
