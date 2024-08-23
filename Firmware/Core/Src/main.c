@@ -51,6 +51,7 @@ UART_HandleTypeDef huart2;
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
+ws_value_t weather_station_data;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -103,7 +104,6 @@ int main(void)
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 
-ws_value_t weather_station_data;
 
   HDC1080_initI2C(hi2c1);
   HDC1080_initSensor();

@@ -1,6 +1,7 @@
+#include <stdio.h>´
+
 #include "ssd1306.h"
 #include "HDC1080.h"
-#include <stdio.h>
 
 
 
