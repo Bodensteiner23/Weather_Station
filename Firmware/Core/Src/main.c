@@ -21,6 +21,7 @@
 #include "usb_device.h"
 
 #include "HDC1080.h"
+#include "PCF8563.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -105,6 +106,9 @@ int main(void)
 
   HDC1080_initI2C(hi2c1);
   HDC1080_initSensor();
+
+  PCF8563_initI2C(hi2c1);
+  PCF8563_initRTC();
   /* USER CODE END 2 */
 
   /* Infinite loop */

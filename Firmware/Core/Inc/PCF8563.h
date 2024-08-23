@@ -15,5 +15,8 @@
 #define Years_Addr			0x08
 
 
+void PCF8563_initI2C(I2C_HandleTypeDef _hi2c);
+void PCF8563_initRTC(void);
+
 
 #endif /* INC_PCF8563_H_ */
