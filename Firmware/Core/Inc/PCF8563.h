@@ -1,5 +1,7 @@
 #ifndef INC_PCF8563_H_
 #define INC_PCF8563_H_
+#include <stm32f1xx_ll_i2c.h>
+
 
 #define PCF8563_I2C_Write_Adress	0xA2
 #define PCF8563_I2C_Read_Adress		0xA3

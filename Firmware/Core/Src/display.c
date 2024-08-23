@@ -1,7 +1,13 @@
 #include "ssd1306.h"
+#include "HDC1080.h"
+#include <stdio.h>
 
 
-void display_plotWeatherStationData(void) {
+
+void display_plotWeatherStationData(ws_value_t _weatherStationData) {
+
+    char buffer[50];
+
 
 	ssd1306_Init();
 	ssd1306_FlipScreenVertically();
@@ -9,9 +15,12 @@ void display_plotWeatherStationData(void) {
 	ssd1306_SetColor(White);
 
     ssd1306_SetCursor(0, 0);
-    ssd1306_WriteString("Temperatur: ", Font_16x26);
+    sprintf(buffer, "Temperature: %.1f", _weatherStationData.temp_val);
+    ssd1306_WriteString(buffer, Font_16x26);
+    
     ssd1306_SetCursor(8, 0);
-    ssd1306_WriteString("Feuchtigkeit: ", Font_16x26);
+    sprintf(buffer, "Feuchtigkeit: %.1f%", _weatherStationData.humid_val);
+    ssd1306_WriteString(buffer, Font_16x26);
 
 
 

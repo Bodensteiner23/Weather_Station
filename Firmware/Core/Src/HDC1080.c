@@ -1,7 +1,9 @@
-#include "main.h"
 #include <stm32f1xx_hal_i2c.h>
 
 #include "HDC1080.h"
+#include "main.h"
+
+#define Maximum_Humidity 0b11111111111111
 
 I2C_HandleTypeDef hi2c;
 
@@ -56,7 +58,7 @@ ws_value_t HDC1080_readData(void) {
 	temp_humid_values.temp_val = ((temp_humid_values.temp_val / 2^16) * 165) - 40;			// ToDo: Check Result
 
 	temp_humid_values.humid_val = humid_raw_val >> 2;
-	temp_humid_values.humid_val = (temp_humid_values.humid_val / 2^16) * 0b11111111111111;	// ToDo: Check Result
+	temp_humid_values.humid_val = (temp_humid_values.humid_val / 2^16) * Maximum_Humidity;	// ToDo: Check Result
 
 	return temp_humid_values;
 }

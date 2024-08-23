@@ -20,12 +20,13 @@
 #include "main.h"
 #include "usb_device.h"
 
-#include "HDC1080.h"
-#include "PCF8563.h"
+
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "HDC1080.h"
+#include "PCF8563.h"
+#include "display.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -50,7 +51,6 @@ UART_HandleTypeDef huart2;
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
-ws_value_t weather_station_data;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -103,6 +103,7 @@ int main(void)
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 
+ws_value_t weather_station_data;
 
   HDC1080_initI2C(hi2c1);
   HDC1080_initSensor();
@@ -113,16 +114,22 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+  uint32_t sensor_tick = HAL_GetTick();
+  uint32_t display_tick = HAL_GetTick();
   while (1)
   {
 
 	  // Sensor Readout
-	  weather_station_data = HDC1080_readData();
-	  HAL_Delay(1000);
-
+    if ((HAL_GetTick() - sensor_tick) >= 1000) {
+	    weather_station_data = HDC1080_readData();
+      sensor_tick = HAL_GetTick();
+    }
 	  // Plot Data on Display
-
-
+    if ((HAL_GetTick() - display_tick) >= 20000) { // ToDo: Check if the Delay is working
+      display_plotWeatherStationData(weather_station_data);
+      display_tick = HAL_GetTick();
+    }
 
 
 
