@@ -23,8 +23,6 @@ void display_plotWeatherStationData(ws_value_t _weatherStationData) {
     sprintf(buffer, "Feuchtigkeit: %.1f%", _weatherStationData.humid_val);
     ssd1306_WriteString(buffer, Font_16x26);
 
-
-
     ssd1306_UpdateScreen();
     HAL_Delay(2000);		//ToDo: Check if this delay is neccessary
 
