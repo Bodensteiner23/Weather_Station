@@ -18,8 +18,6 @@ void HDC1080_initSensor(void) {
 	uint16_t config_data = 0;
 
 	config_data |= 1 << 12;					// Temp and Humid readout
-	config_data |= (1 << 8) | (1 << 9);		// Set Humidity to 11 bit
-	config_data |= 1 << 10;					// Set Temp to 11 bit
 
 	data_send[0] = (config_data >> 0) & 0xFF;
 	data_send[1] = (config_data >> 8) & 0xFF;
