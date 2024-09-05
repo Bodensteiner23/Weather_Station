@@ -3,14 +3,14 @@
 
 #include <stm32f1xx_hal.h>
 
-#define HDC1080_I2C_Address 			0x40
+#define HDC1080_I2C_Address 		   (0x40 << 1)
 #define Temperature_Register_Address 	0x00
 #define Humidity_Register_Address 		0x01
 #define Config_Register_Address 		0x02
 
 typedef struct {
-	uint16_t temp_val;
-	uint16_t humid_val;
+	double temp_val;
+	double humid_val;
 }ws_value_t;
 
 

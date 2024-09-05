@@ -101,11 +101,12 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
 
-  HDC1080_initI2C(hi2c1);
+//  HDC1080_initI2C(hi2c1);
   HDC1080_initSensor();
+  HAL_Delay(20);
 
-  PCF8563_initI2C(hi2c1);
-  PCF8563_initRTC();
+//  PCF8563_initI2C(hi2c1);
+//  PCF8563_initRTC();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -122,15 +123,15 @@ int main(void)
       sensor_tick = HAL_GetTick();
     }
 	  // Plot Data on Display
-    if ((HAL_GetTick() - display_tick) >= 20000) { // ToDo: Check if the Delay is working
-      display_plotWeatherStationData(weather_station_data);
-      display_tick = HAL_GetTick();
-    }
+//    if ((HAL_GetTick() - display_tick) >= 20000) { // ToDo: Check if the Delay is working
+//      display_plotWeatherStationData(weather_station_data);
+//      display_tick = HAL_GetTick();
+//    }
 
     // Send USB data
-    uint8_t data[] = "Hello from STM32!\r\n";
-    CDC_Transmit_FS(data, sizeof(data));
-    HAL_Delay(1000);
+//    uint8_t data[] = "Hello from STM32!\r\n";
+//    CDC_Transmit_FS(data, sizeof(data));
+//    HAL_Delay(1000);
 
     HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
     HAL_Delay(1000);
