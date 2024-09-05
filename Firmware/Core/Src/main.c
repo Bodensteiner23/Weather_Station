@@ -50,6 +50,7 @@ UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 ws_value_t weather_station_data;
+uint8_t buffer[100];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -120,7 +121,9 @@ int main(void)
 	  // Sensor Readout
     if ((HAL_GetTick() - sensor_tick) >= 1000) {
 	    weather_station_data = HDC1080_readData();
-      sensor_tick = HAL_GetTick();
+	    sprintf((char*)buffer, "Temp Data: %.2f \nHumid Data: %.2f \n\n", weather_station_data.temp_val, weather_station_data.humid_val);
+	    HAL_UART_Transmit(&huart1, buffer, strlen((char*)buffer), 1000);
+	    sensor_tick = HAL_GetTick();
     }
 	  // Plot Data on Display
 //    if ((HAL_GetTick() - display_tick) >= 20000) { // ToDo: Check if the Delay is working
