@@ -6,7 +6,7 @@
  *      Author: Andriy Honcharenko
  *      version: 2
  *
- *  Modify on: 22/10/2021
+ *  Modify on: 06/11/2021
  *      Author: Roberto Benjami
  *  Added features in DMA mode:
  *  - ssd1306_UpdateScreen works without blocking
@@ -21,11 +21,11 @@
 #ifndef SSD1306_H_
 #define SSD1306_H_
 
+#include "ssd1306_defines.h"
+#include "fonts.h"
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
-#include "../../App/ssd1306/fonts.h"
-#include "../../App/ssd1306/ssd1306_defines.h"
 
 // I2c address
 #define SSD1306_I2C_ADDR       SSD1306_ADDRESS << 1 // 0x3C << 1 = 0x78

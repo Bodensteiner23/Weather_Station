@@ -24,8 +24,9 @@
 /* USER CODE BEGIN Includes */
 #include "HDC1080.h"
 #include "PCF8563.h"
-#include "display.h"
 #include "usbd_cdc_if.h"
+#include "ssd1306.h"
+#include "display.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -50,7 +51,10 @@ UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 ws_value_t weather_station_data;
-uint8_t buffer[100];
+uint8_t buffer_UART[100];
+char temp_str[10];
+char humid_str[10];
+char buffer[100];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -102,12 +106,18 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
 
-//  HDC1080_initI2C(hi2c1);
+  // HDC1080_initI2C(hi2c1);
   HDC1080_initSensor();
   HAL_Delay(20);
 
 //  PCF8563_initI2C(hi2c1);
 //  PCF8563_initRTC();
+
+  // Display Init
+  ssd1306_Init();
+  ssd1306_FlipScreenVertically();
+  ssd1306_MirrorFlipScreen();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -118,23 +128,33 @@ int main(void)
   while (1)
   {
 
-	  // Sensor Readout
+	// Sensor Readout
     if ((HAL_GetTick() - sensor_tick) >= 1000) {
 	    weather_station_data = HDC1080_readData();
-	    sprintf((char*)buffer, "Temp Data: %.2f \nHumid Data: %.2f \n\n", weather_station_data.temp_val, weather_station_data.humid_val);
-	    HAL_UART_Transmit(&huart1, buffer, strlen((char*)buffer), 1000);
 	    sensor_tick = HAL_GetTick();
     }
-	  // Plot Data on Display
-//    if ((HAL_GetTick() - display_tick) >= 20000) { // ToDo: Check if the Delay is working
-//      display_plotWeatherStationData(weather_station_data);
-//      display_tick = HAL_GetTick();
-//    }
+	// Plot Data on Display
+    if ((HAL_GetTick() - display_tick) >= 1000) { // ToDo: Check if the Delay is working
+		sprintf(temp_str, "%.1f", weather_station_data.temp_val);
+		sprintf(humid_str, "%.1f%", weather_station_data.humid_val);
+
+		display_updateDisplay("Temp:");
+		HAL_Delay(1000);
+		display_updateDisplay(temp_str);
+		HAL_Delay(1000);
+
+		display_updateDisplay("Humid:");
+		HAL_Delay(1000);
+		display_updateDisplay(humid_str);
+		display_tick = HAL_GetTick();
+    }
 
     // Send USB data
 //    uint8_t data[] = "Hello from STM32!\r\n";
 //    CDC_Transmit_FS(data, sizeof(data));
 //    HAL_Delay(1000);
+
+
 
     HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
     HAL_Delay(1000);

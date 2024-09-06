@@ -6,7 +6,7 @@
  *      Author: Andriy Honcharenko
  *      version: 2
  *
- *  Modify on: 06/11/2021
+ *  Modify on: 17/08/2022
  *      Author: Roberto Benjami
  *  Added features in DMA mode:
  *  - ssd1306_UpdateScreen works without blocking
@@ -18,9 +18,8 @@
  *  - enable raster interrupt(s) of PAGEx (you can set which PAGE(s) )
  */
 
-#include "../../App/ssd1306/ssd1306.h"
-
 #include <math.h>
+#include "ssd1306.h"
 
 #if SSD1306_USE_DMA == 0 && SSD1306_CONTUPDATE == 1
 #error SSD1306_CONTUPDATE only in DMA MODE !
@@ -58,6 +57,7 @@ void ssd1306_SetColor(SSD1306_COLOR color)
 {
   SSD1306.Color = color;
 }
+
 
 //  Initialize the oled screen
 uint8_t ssd1306_Init(void)
@@ -819,6 +819,7 @@ void ssd1306_UpdateScreen(void)
 
 volatile uint8_t ssd1306_updatestatus = 0;
 volatile uint8_t ssd1306_updateend;
+uint8_t i2c_command = 0;
 
 #if SSD1306_CONTUPDATE == 0
 
@@ -829,7 +830,8 @@ void ssd1306_WriteCommand(uint8_t command)
 {
   while(ssd1306_updatestatus);
   while(HAL_I2C_GetState(&SSD1306_I2C_PORT) != HAL_I2C_STATE_READY) { };
-  HAL_I2C_Mem_Write_DMA(&SSD1306_I2C_PORT, SSD1306_I2C_ADDR, 0x00, 1, &command, 1);
+  i2c_command = command;
+  HAL_I2C_Mem_Write_DMA(&SSD1306_I2C_PORT, SSD1306_I2C_ADDR, 0x00, 1, &i2c_command, 1);
 }
 
 //
@@ -837,13 +839,12 @@ void ssd1306_WriteCommand(uint8_t command)
 //
 void ssd1306_UpdateScreen(void)
 {
-  uint8_t  command;
   if(ssd1306_updatestatus == 0)
   {
     ssd1306_updatestatus = SSD1306_HEIGHT;
     ssd1306_updateend = SSD1306_HEIGHT + (SSD1306_HEIGHT / 2);
-    command = 0xB0;
-    HAL_I2C_Mem_Write_DMA(&SSD1306_I2C_PORT, SSD1306_I2C_ADDR, 0x00, 1, &command, 1);
+    i2c_command = 0xB0;
+    HAL_I2C_Mem_Write_DMA(&SSD1306_I2C_PORT, SSD1306_I2C_ADDR, 0x00, 1, &i2c_command, 1);
   }
   else if(ssd1306_updatestatus >= SSD1306_HEIGHT)
   {
@@ -865,7 +866,6 @@ __weak void ssd1306_UpdateCompletedCallback(void) { };
 void HAL_I2C_MemTxCpltCallback(I2C_HandleTypeDef *hi2c)
 {
   uint32_t phase;
-  uint8_t  command;
   if(hi2c->Instance == SSD1306_I2C_PORT.Instance)
   {
     if(ssd1306_updatestatus)
@@ -879,12 +879,12 @@ void HAL_I2C_MemTxCpltCallback(I2C_HandleTypeDef *hi2c)
         else
         {
           if(phase == 0)
-            command = 0xB0 + ((ssd1306_updatestatus >> 2) & (SSD1306_HEIGHT / 8 - 1));
+            i2c_command = 0xB0 + ((ssd1306_updatestatus >> 2) & (SSD1306_HEIGHT / 8 - 1));
           else if(phase == 1)
-            command = SETLOWCOLUMN;
+            i2c_command = SETLOWCOLUMN;
           else if(phase == 2)
-            command = SETHIGHCOLUMN;
-          HAL_I2C_Mem_Write_DMA(&SSD1306_I2C_PORT, SSD1306_I2C_ADDR, 0x00, 1, &command, 1);
+            i2c_command = SETHIGHCOLUMN;
+          HAL_I2C_Mem_Write_DMA(&SSD1306_I2C_PORT, SSD1306_I2C_ADDR, 0x00, 1, &i2c_command, 1);
         }
       }
       else
@@ -899,7 +899,6 @@ void HAL_I2C_MemTxCpltCallback(I2C_HandleTypeDef *hi2c)
 #elif SSD1306_CONTUPDATE == 1
 
 volatile uint8_t ssd1306_command = 0;
-volatile uint8_t i2c_command = 0;
 volatile uint8_t ssd1306_ContUpdate = 0;
 volatile uint8_t ssd1306_RasterIntRegs = 0;
 
@@ -916,7 +915,7 @@ void ssd1306_WriteCommand(uint8_t command)
   else
   {
     while(HAL_I2C_GetState(&SSD1306_I2C_PORT) != HAL_I2C_STATE_READY) { };
-		i2c_command = command;
+    i2c_command = command;
     HAL_I2C_Mem_Write_DMA(&SSD1306_I2C_PORT, SSD1306_I2C_ADDR, 0x00, 1, &i2c_command, 1);
   }
 }
@@ -928,8 +927,8 @@ void ssd1306_ContUpdateEnable(void)
     while(HAL_I2C_GetState(&SSD1306_I2C_PORT) != HAL_I2C_STATE_READY) { };
     ssd1306_updatestatus = SSD1306_HEIGHT;
     ssd1306_updateend = SSD1306_HEIGHT + (SSD1306_HEIGHT / 2);
-    i2c_command = 0xB0;
     ssd1306_ContUpdate = 1;
+    i2c_command = 0xB0;
     HAL_I2C_Mem_Write_DMA(&SSD1306_I2C_PORT, SSD1306_I2C_ADDR, 0x00, 1, &i2c_command, 1);
   }
 }
@@ -939,7 +938,7 @@ void ssd1306_ContUpdateDisable(void)
   if(ssd1306_ContUpdate)
   {
     ssd1306_ContUpdate = 0;
-		while(ssd1306_updatestatus) { };
+    while(ssd1306_updatestatus) { };
   }
 }
 
